@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Beranda - Sistem Klasifikasi Teks{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1>Klasifikasi Teks</h1>
+    <form action="/predict" method="POST">
+        <textarea name="input_text" placeholder="Masukkan teks di sini...">{{ input_text or '' }}</textarea>
+        <button type="submit">Prediksi</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <h2>Hasil Prediksi</h2>
+            <p><strong>Kelas:</strong> {{ prediction }}</p>
+            <h3>Probabilitas Tiap Kelas:</h3>
+            <ul>
+                {% for label, prob in probs.items() %}
+                    <li><strong>{{ label }}:</strong> {{ prob }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Teks Asli:</h3>
+            <p>{{ input_text }}</p>
+
+            <h3>Kata Kasar yang Ditemukan:</h3>
+            <p style="font-size: 18px;">{{ highlighted_text | safe }}</p>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}

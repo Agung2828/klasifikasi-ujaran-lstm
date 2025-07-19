@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %} 🙃 Tentang - Sistem Klasifikasi Teks{% endblock %}
+
+{% block content %}
+<div class="container" style="padding: 30px;">
+    <h2 class="mb-4">Tentang Sistem</h2>
+
+    <p>
+        Sistem ini merupakan hasil penelitian berjudul <strong>"Klasifikasi Ujaran Kebencian pada Komentar Twitter Berbahasa Indonesia Menggunakan Metode LSTM"</strong>. Tujuan dari pengembangan sistem ini adalah untuk membantu proses identifikasi ujaran kebencian secara otomatis dalam komentar-komentar di media sosial, khususnya Twitter.
+    </p>
+
+    <p>
+        Masalah ujaran kebencian di media sosial telah menjadi isu penting yang dapat memicu konflik sosial. Dengan volume komentar yang sangat besar, pemantauan manual menjadi tidak efisien. Oleh karena itu, pendekatan otomatis seperti <strong>deep learning</strong> digunakan untuk meningkatkan efektivitas dalam mendeteksi konten negatif.
+    </p>
+
+    <h4 class="mt-4">Metode yang Digunakan</h4>
+    <ul>
+        <li>Menggunakan algoritma <strong>Long Short-Term Memory (LSTM)</strong> karena kemampuannya dalam memahami urutan kata dalam teks.</li>
+        <li>Dataset yang digunakan berasal dari Kaggle, yaitu <em>Indonesian Abusive and Hate Speech Twitter Text</em>.</li>
+        <li>Label dikategorikan menjadi dua kelas utama: <strong>Hate</strong> dan <strong>Non-Hate</strong>.</li>
+        <li>Model dilatih menggunakan preprocessing seperti pembersihan teks, tokenisasi, normalisasi, padding, dan stopword removal.</li>
+    </ul>
+
+    <h4 class="mt-4">Hasil Penelitian</h4>
+    <p>
+        Model LSTM yang dibangun mencapai tingkat akurasi sekitar <strong>85%</strong> pada data uji. Meskipun ada beberapa kesalahan klasifikasi, hasil ini menunjukkan bahwa LSTM cukup efektif dalam mengenali ujaran kebencian dalam teks berbahasa Indonesia.
+    </p>
+
+    <h4 class="mt-4">Harapan Pengembangan</h4>
+    <p>
+        Sistem ini diharapkan dapat digunakan dalam berbagai platform digital untuk membantu <strong>moderasi komentar secara otomatis</strong>, menciptakan lingkungan digital yang lebih sehat dan aman, serta sebagai dasar penelitian lanjutan menggunakan model dan embedding khusus Bahasa Indonesia.
+    </p>
+
+    <p class="mt-5"><em>Disusun oleh: Putri Amanda Sari, Rafi Asyiqi, Agung Kurniawan<br>Politeknik Caltex Riau - 2025</em></p>
+</div>
+{% endblock %}
