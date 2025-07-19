@@ -33,17 +33,17 @@ Proyek ini adalah aplikasi berbasis web yang digunakan untuk mengklasifikasikan 
 
 project_nlp/
 │
-├── app.py # Main Flask application
-├── model_klasifikasi_lstm.h5 # Trained LSTM model
+├── app.py # Main Flask application  
+├── model_klasifikasi_lstm.h5 # Trained LSTM model  
 │
 ├── templates/
-│ ├── layout.html
-│ ├── index.html
-│ ├── tentang.html
-│ ├── kontak.html
-│ └── test.html
+│   ├── layout.html  
+│   ├── index.html  
+│   ├── tentang.html  
+│   ├── kontak.html  
+│   └── test.html  
 │
 ├── static/
-│ ├── styles.css
-│ └── uploads/
-│ └── logo.png
+│   ├── styles.css  
+│   └── uploads/  
+│   └── logo.png
